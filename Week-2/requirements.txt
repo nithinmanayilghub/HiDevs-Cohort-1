@@ -1,0 +1,12 @@
+python-dotenv 
+gradio
+langchain-unstructured
+unstructured-client "unstructured[all-docs]"
+unstructured[local-inference]
+nltk
+langchain
+langchain-community langchain-core
+langchain sentence_transformers
+langchain-huggingface
+langchain-chroma
+!pip install langdetect
