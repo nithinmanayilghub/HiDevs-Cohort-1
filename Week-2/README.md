@@ -23,7 +23,7 @@ Before running the chatbot, make sure you have all the necessary packages instal
 
 ## Architecture Overview
 The Customer Support Chatbot architecture leverages conversational AI models with a robust retrieval-augmented generation (RAG) pipeline, which ensures responses are accurate and context-aware. Below is an outline of the core components and workflow.
-![alt text]()
+![alt text](https://github.com/nithinmanayilghub/HiDevs-Cohort-1/blob/main/Week-2/Week-2%20Project.png)
 ### Architecture Pipeline Summary
 
 #### 1. Document Loading and Preprocessing
