@@ -20,3 +20,40 @@ An End-to-End open-source **Conversational AI Chatbot** built to enhance custome
 Before running the chatbot, make sure you have all the necessary packages installed. Use the following commands to set up the environment:
 
 `pip install -r requirements.txt`
+
+## Architecture Overview
+The Customer Support Chatbot architecture leverages conversational AI models with a robust retrieval-augmented generation (RAG) pipeline, which ensures responses are accurate and context-aware. Below is an outline of the core components and workflow.
+
+### Architecture Pipeline Summary
+
+#### 1. Document Loading and Preprocessing
+
+Loads PDFs, manuals, and product catalogs from the provided knowledge base.
+Splits content into chunks using the CharacterTextSplitter for better indexing.
+Non-English texts are filtered out using langdetect.
+
+#### 2. Vectorization and Indexing
+
+Converts processed text into vector embeddings using HuggingFace Embeddings.
+Stores embeddings in a Chroma vector database for efficient retrieval.
+Retrieval Chain Design
+
+#### 3. Retrieval Chain Design
+Uses Conversational Retrieval Chains to query the vector store.
+The retriever utilizes Maximal Marginal Relevance (MMR) to return the most relevant documents.
+
+#### 4. Retrieval Chain DesignFew-Shot Prompting
+
+A prompt template is designed to guide responses.
+Templates include contextual examples for resolving product-specific issues (e.g., product troubleshooting, refund requests).
+
+#### 5. Model Deployment
+
+The chatbot employs the Zephyr 7B model from HuggingFace for text generation.
+Responses are shaped by previous interactions using ConversationBufferMemory.
+Chat Interface using Gradio
+
+A Gradio interface enables seamless interaction between users and the chatbot.
+The interface runs on a shared public link for easy testing and deployment.
+
+
